@@ -9,6 +9,7 @@
         <module name="xparser-validation" />
         <module name="xparser-parser" />
         <module name="xparser-annotation" />
+        <module name="xparser-spark" />
         <module name="xparser-flink" />
         <module name="xparser-hive" />
       </profile>

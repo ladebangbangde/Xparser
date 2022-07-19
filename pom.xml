@@ -14,6 +14,7 @@
         <module>xparser-flink</module>
         <module>xparser-hive</module>
         <module>xparser-validation</module>
+        <module>xparser-spark</module>
     </modules>
 
     <properties>
