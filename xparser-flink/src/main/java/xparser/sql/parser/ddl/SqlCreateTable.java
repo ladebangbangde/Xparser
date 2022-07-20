@@ -176,6 +176,10 @@ public class SqlCreateTable extends SqlCreate implements ExtendedSqlNode {
         }
     }
 
+    /**
+     * This method will be used in some occuasions like judging whether columns only contain regular types
+     * @return
+     */
     public boolean hasRegularColumnsOnly() {
         for (SqlNode column : columnList) {
             final SqlTableColumn tableColumn = (SqlTableColumn) column;
@@ -241,6 +245,14 @@ public class SqlCreateTable extends SqlCreate implements ExtendedSqlNode {
         return writer.toString();
     }
 
+    /**
+     * This function is used to analysis all
+     * @param writer    Target writer
+     * @param leftPrec  The precedence of the {@link SqlNode} immediately
+     *                  preceding this node in a depth-first scan of the parse
+     *                  tree
+     * @param rightPrec The precedence of the {@link SqlNode} immediately
+     */
     @Override
     public void unparse(SqlWriter writer, int leftPrec, int rightPrec) {
         writer.keyword("CREATE");

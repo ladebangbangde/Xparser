@@ -128,7 +128,15 @@ public class XCreateTable extends SqlCreate implements ExtendedSqlNode {
         ret.addAll(this.tableConstraints);
         return ret;
     }
-
+    public boolean hasRegularColumnsOnly() {
+        for (SqlNode column : columnList) {
+            final XSqlTableColumn tableColumn = (XSqlTableColumn) column;
+            if (!(tableColumn instanceof SqlRegularColumn)) {
+                return false;
+            }
+        }
+        return true;
+    }
     /**
      *
      * @param writer    Target writer
