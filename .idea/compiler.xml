@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="xparser-validation" />
         <module name="xparser-parser" />
+        <module name="xparser-xsql" />
+        <module name="xparser-hive" />
+        <module name="xparser-validation" />
         <module name="xparser-annotation" />
         <module name="xparser-spark" />
         <module name="xparser-flink" />
-        <module name="xparser-hive" />
       </profile>
     </annotationProcessing>
   </component>

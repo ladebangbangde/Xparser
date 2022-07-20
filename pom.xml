@@ -15,6 +15,7 @@
         <module>xparser-hive</module>
         <module>xparser-validation</module>
         <module>xparser-spark</module>
+        <module>xparser-xsql</module>
     </modules>
 
     <properties>
@@ -25,6 +26,7 @@
             <calcite.version>1.26.0</calcite.version>
             <guava.version>29.0-jre</guava.version>
             <slf4j.version>1.7.32</slf4j.version>
+             <commons.version>3.10</commons.version>
     </properties>
 
 </project>
