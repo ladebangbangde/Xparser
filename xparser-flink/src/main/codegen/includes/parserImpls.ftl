@@ -734,7 +734,7 @@ SqlTableConstraint ColumnConstraint(SqlIdentifier column) :
 }
 
 /** Parses a table constraint for CREATE TABLE. */
-SqlTableConstraint TableConstraint() :
+XSqlTableConstraint TableConstraint() :
 {
     SqlIdentifier constraintName = null;
     final SqlLiteral uniqueSpec;
@@ -748,7 +748,7 @@ SqlTableConstraint TableConstraint() :
     columns = ParenthesizedSimpleIdentifierList()
     [ enforcement = ConstraintEnforcement() ]
     {
-        return new SqlTableConstraint(
+        return new XSqlTableConstraint(
                         constraintName,
                         uniqueSpec,
                         columns,
@@ -786,7 +786,11 @@ SqlLiteral UniqueSpec() :
         return uniqueSpec;
     }
 }
-
+/*
+*
+*
+*
+/
 SqlLiteral ConstraintEnforcement() :
 {
     SqlLiteral enforcement;
@@ -805,7 +809,9 @@ SqlLiteral ConstraintEnforcement() :
         return enforcement;
     }
 }
-
+/*
+*
+*/
 SqlNode TableOption() :
 {
     SqlNode key;

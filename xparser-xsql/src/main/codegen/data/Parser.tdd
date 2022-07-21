@@ -16,8 +16,8 @@
 
 {
   # Generated parser implementation package and class name.
-  package: "xparser.sql.parser.impl",
-  class: "FlinkSqlParserImpl",
+  package: "xparser.impl",
+  class: "XSqlParserImpl",
 
   # List of additional classes and packages to import.
   # Example. "org.apache.calcite.sql.*", "java.util.List".
@@ -401,7 +401,6 @@
   # items in this list become non-reserved.
   # Please keep the keyword in alphabetical order if new keyword is added.
   nonReservedKeywordsToAdd: [
-    # not in core, added in Flink
     "CHANGELOG_MODE"
     "ENFORCED"
     "ESTIMATED_COST"
@@ -461,7 +460,7 @@
   # List of methods for parsing extensions to "DROP" calls.
   # Each must accept arguments "(Span s)".
   dropStatementParserMethods: [
-    "SqlDropExtended"
+
   ]
 
   # Binary operators tokens

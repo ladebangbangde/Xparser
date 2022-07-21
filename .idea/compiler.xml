@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="xparser-parser" />
         <module name="xparser-xsql" />
-        <module name="xparser-hive" />
         <module name="xparser-validation" />
         <module name="xparser-annotation" />
         <module name="xparser-spark" />
         <module name="xparser-flink" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xparser-hive" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -251,31 +251,31 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <!-- This must be run AFTER the fmpp-maven-plugin -->
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>javacc-maven-plugin</artifactId>
-                <version>2.4</version>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <id>javacc</id>
-                        <goals>
-                            <goal>javacc</goal>
-                        </goals>
-                        <configuration>
-                            <sourceDirectory>${project.build.directory}/generated-sources/</sourceDirectory>
-                            <includes>
-                                <include>**/Parser.jj</include>
-                            </includes>
-                            <!-- This must be kept synced with Apache Calcite. -->
-                            <lookAhead>1</lookAhead>
-                            <isStatic>false</isStatic>
-                            <outputDirectory>${project.build.directory}/generated-sources/</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                &lt;!&ndash; This must be run AFTER the fmpp-maven-plugin &ndash;&gt;-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>javacc-maven-plugin</artifactId>-->
+<!--                <version>2.4</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>generate-sources</phase>-->
+<!--                        <id>javacc</id>-->
+<!--                        <goals>-->
+<!--                            <goal>javacc</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <sourceDirectory>${project.build.directory}/generated-sources/</sourceDirectory>-->
+<!--                            <includes>-->
+<!--                                <include>**/Parser.jj</include>-->
+<!--                            </includes>-->
+<!--                            &lt;!&ndash; This must be kept synced with Apache Calcite. &ndash;&gt;-->
+<!--                            <lookAhead>1</lookAhead>-->
+<!--                            <isStatic>false</isStatic>-->
+<!--                            <outputDirectory>${project.build.directory}/generated-sources/</outputDirectory>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
